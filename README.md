@@ -1,6 +1,6 @@
 # SolarCoyote
 
-How To Deal With This Bullshit:
+How To Deal With This Bullshit: (EDIT)
 
 1. Make a GitHub account. Notice the spelling: GitHub, not Pornhub. I made that mistake too many times.
 2. Download GitHub desktop: https://desktop.github.com/
