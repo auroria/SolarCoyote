@@ -15,6 +15,6 @@ How To Deal With This Bullshit:
 11. Enter a description for the changes in the "Summary" box.
 12. Click "Commit to master"
 13. Click "History" in the top middle.
-14. Click "Sych" in the top right.
+14. Click "Sync" in the top right.
 15. Repeat steps 8 through 14 until King Jose is appeased.
 
