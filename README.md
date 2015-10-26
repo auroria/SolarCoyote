@@ -1,19 +1,35 @@
 # SolarCoyote
 
-How To Deal With This Bullshit:
+A. Setup:
 
-1. Make a GitHub account. Notice the spelling: GitHub, not Pornhub. I made that mistake too many times.
+1. Make a GitHub account.
 2. Download GitHub desktop: https://desktop.github.com/
-3. Lemme holla at yo numba, so that I can add you as a collaborator.
+3. Make me add you as a collaborator.
 4. Open up GitHub Desktop.
 5. Click the + in the top left.
 6. Click "Clone"
-7. Clone that shit anywhere you want.
-8. Finish with whatever bullshit work you had to do for King Jose. (Open the scene in the "Scenes" folder to open the project)
-9. Open up GitHub Desktop.
-10. Click "Changes" in the top middle.
-11. Enter a description for the changes in the "Summary" box.
-12. Click "Commit to master"
-13. Click "History" in the top middle.
-14. Click "Sync" in the top right.
-15. Repeat steps 8 through 14 until King Jose is appeased.
+7. Clone to whereever you want.
+
+B. Doing Work:
+
+1. Open the scene in the "Scenes" folder to open the project.
+2. Make whatever changes.
+
+C. Local Commit:
+
+1. Open Github Desktop.
+2. Confirm that "WorkingBranch" is selected.
+3. Click the "Changes" tab.
+4. Add description to "Summary."
+5. Click Commit to "WorkingBranch."
+
+Your changes are now commited locally to your local WorkingBranch.
+
+D. Push to Repo:
+
+1. Confirm the "WorkingBranch" is selected.
+2. Click the "Sync" button at the top right.
+
+Your commit is now pushed to the actual WorkingBranch. 
+
+Now repeat B, C, and D.
