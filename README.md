@@ -9,7 +9,7 @@ How To Deal With This Bullshit:
 5. Click the + in the top left.
 6. Click "Clone"
 7. Clone that shit anywhere you want.
-8. Finish with whatever bullshit work you had to do for King Jose.
+8. Finish with whatever bullshit work you had to do for King Jose. (Open the scene in the "Scenes" folder to open the project)
 9. Open up GitHub Desktop.
 10. Click "Changes" in the top middle.
 11. Enter a description for the changes in the "Summary" box.
