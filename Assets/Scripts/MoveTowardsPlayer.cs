@@ -28,7 +28,7 @@ public class MoveTowardsPlayer : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Laser")) 
 		{
 			enemyHealth.TakeDamage(damageFromLasers);
-			//gameObject.SetActive(false);
+            Destroy(gameObject);
 		}
 	}
 }

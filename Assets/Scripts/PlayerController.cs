@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour {
 		{
 			foreach(var item in playerShooting)
 			{
-				item.timeBetweenBullets+= .3f;
+				item.timeBetweenBullets-= .3f;
 			}
 
 			other.gameObject.SetActive (false);
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Asteroid")) 
 		{
 			playerHealth.TakeDamage(damageFromAsteroids);
-			//gameObject.SetActive(false);
+			other.gameObject.SetActive(false);
 		}
 	}
 }

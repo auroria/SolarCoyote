@@ -15,7 +15,7 @@ public class PlayerShooting : MonoBehaviour
 	Light gunLight;                                 // Reference to the light component.
 	float effectsDisplayTime = 0.2f;                // The proportion of the timeBetweenBullets that the effects will display for.
 
-	public Collider collider;
+	Collider collider;
 	void Awake ()
 	{
 		// Create a layer mask for the Shootable layer.

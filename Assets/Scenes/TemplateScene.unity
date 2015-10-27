@@ -187,6 +187,10 @@ Prefab:
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11477192, guid: 8acb8eafabf889841961c56f7851a257, type: 2}
+      propertyPath: timeBetweenBullets
+      value: .150000006
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8acb8eafabf889841961c56f7851a257, type: 2}
   m_IsPrefabParent: 0
@@ -911,6 +915,10 @@ Prefab:
     - target: {fileID: 10884752, guid: 8acb8eafabf889841961c56f7851a257, type: 2}
       propertyPath: m_Color.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477192, guid: 8acb8eafabf889841961c56f7851a257, type: 2}
+      propertyPath: timeBetweenBullets
+      value: .150000006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8acb8eafabf889841961c56f7851a257, type: 2}
