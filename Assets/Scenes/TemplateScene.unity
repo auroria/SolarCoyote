@@ -189,7 +189,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11477192, guid: 8acb8eafabf889841961c56f7851a257, type: 2}
       propertyPath: timeBetweenBullets
-      value: .150000006
+      value: .600000024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8acb8eafabf889841961c56f7851a257, type: 2}
@@ -918,7 +918,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11477192, guid: 8acb8eafabf889841961c56f7851a257, type: 2}
       propertyPath: timeBetweenBullets
-      value: .150000006
+      value: .600000024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8acb8eafabf889841961c56f7851a257, type: 2}
