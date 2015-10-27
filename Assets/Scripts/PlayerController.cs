@@ -28,10 +28,9 @@ public class PlayerController : MonoBehaviour {
 		Vector3 movement;
 		if (Input.GetKey ("z")) {
 			movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-			Debug.Log ("z");
-		} else 
+		} 
+		else 
 		{
-			Debug.Log ("");
 			
 			movement = new Vector3 (moveHorizontal, moveVertical, 0.0f);
 		}
@@ -48,6 +47,10 @@ public class PlayerController : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Health Pick Up"))
 		{
 			playerHealth.HealPlayer(healAmount);
+			other.gameObject.SetActive (false);
+		}
+		if (other.gameObject.CompareTag ("Shoot Pick Up"))
+		{
 			other.gameObject.SetActive (false);
 		}
 	}
