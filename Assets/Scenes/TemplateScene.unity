@@ -153,8 +153,10 @@ MonoBehaviour:
   currentHealth: 0
   healthSlider: {fileID: 1719774095}
   damageImage: {fileID: 889856758}
+  healImage: {fileID: 889856758}
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: .100000001}
+  healFlashColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &563513597
 Prefab:
   m_ObjectHideFlags: 0
