@@ -120,7 +120,7 @@ MonoBehaviour:
   enemyHealth: {fileID: 11419694}
   damageFromAsteroids: 25
   damageFromLasers: 20
-  speed: 15
+  speed: 5
 --- !u!135 &13595250
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -154,7 +154,7 @@ Prefab:
       objectReference: {fileID: 11419694}
     - target: {fileID: 0}
       propertyPath: speed
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.x
