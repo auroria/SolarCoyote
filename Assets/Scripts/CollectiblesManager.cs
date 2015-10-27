@@ -10,6 +10,7 @@ public class CollectiblesManager : MonoBehaviour
 	
 	void Start ()
 	{
+		int spawnTime = Random.Range (0, (int)maxSpawnTime);
 		// Call the Spawn function after a delay of the spawnTime and then continue to call after the same amount of time.
 		InvokeRepeating ("Spawn", 0, maxSpawnTime);
 	}
