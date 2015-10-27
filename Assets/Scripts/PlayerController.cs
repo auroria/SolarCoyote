@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
     public Boundary bound;
 	private Rigidbody rb;
 	public PlayerHealth playerHealth;
+	public PlayerShooting[] playerShooting;
 
 	void Start ()
 	{
@@ -51,6 +52,11 @@ public class PlayerController : MonoBehaviour {
 		}
 		if (other.gameObject.CompareTag ("Shoot Pick Up"))
 		{
+			foreach(var item in playerShooting)
+			{
+				item.timeBetweenBullets+= .3f;
+			}
+
 			other.gameObject.SetActive (false);
 		}
 	}
