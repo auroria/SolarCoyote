@@ -12,6 +12,7 @@ GameObject:
   - 135: {fileID: 13510892}
   - 23: {fileID: 2386124}
   - 54: {fileID: 5429596}
+  - 114: {fileID: 11420562}
   m_Layer: 0
   m_Name: Shoot Pick Up
   m_TagString: Shoot Pick Up
@@ -77,6 +78,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &11420562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a02a475f8019be4d97eeed6110b715a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 3
 --- !u!135 &13510892
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -108,6 +121,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d5e3b04bd2e950f49a7d1ee939d62d5e, type: 2}
+    - target: {fileID: 0}
+      propertyPath: lifetime
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 187380}

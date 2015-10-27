@@ -102,7 +102,8 @@ public class PlayerHealth : MonoBehaviour
 	{
 		// Set the death flag so this function won't be called again.
 		isDead = true;
-		
+
+		gameObject.SetActive (false);
 		// Turn off any remaining shooting effects.
 		//playerShooting.DisableEffects ();
 		

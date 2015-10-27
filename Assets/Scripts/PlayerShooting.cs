@@ -14,6 +14,8 @@ public class PlayerShooting : MonoBehaviour
 	AudioSource gunAudio;                           // Reference to the audio source.
 	Light gunLight;                                 // Reference to the light component.
 	float effectsDisplayTime = 0.2f;                // The proportion of the timeBetweenBullets that the effects will display for.
+
+	public Collider collider;
 	void Awake ()
 	{
 		// Create a layer mask for the Shootable layer.
@@ -23,6 +25,7 @@ public class PlayerShooting : MonoBehaviour
 		gunLine = GetComponent <LineRenderer> ();
 		gunAudio = GetComponent<AudioSource> ();
 		gunLight = GetComponent<Light> ();
+		collider = GetComponent<Collider> ();
 	}
 	
 	void Update ()
@@ -51,6 +54,7 @@ public class PlayerShooting : MonoBehaviour
 		// Disable the line renderer and the light.
 		gunLine.enabled = false;
 		gunLight.enabled = false;
+		collider.enabled = false;
 	}
 	
 	void Shoot ()
@@ -71,7 +75,9 @@ public class PlayerShooting : MonoBehaviour
 		// Set the shootRay so that it starts at the end of the gun and points forward from the barrel.
 		shootRay.origin = transform.position;
 		shootRay.direction = transform.forward;
-		
+
+		collider.enabled = true;
+
 		// Perform the raycast against gameobjects on the shootable layer and if it hits something...
 		if(Physics.Raycast (shootRay, out shootHit, range, shootableMask))
 		{

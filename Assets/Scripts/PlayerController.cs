@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
 	private Rigidbody rb;
 	public PlayerHealth playerHealth;
 	public PlayerShooting[] playerShooting;
+	public int damageFromAsteroids;
 
 	void Start ()
 	{
@@ -58,6 +59,11 @@ public class PlayerController : MonoBehaviour {
 			}
 
 			other.gameObject.SetActive (false);
+		}
+		if (other.gameObject.CompareTag ("Asteroid")) 
+		{
+			playerHealth.TakeDamage(damageFromAsteroids);
+			//gameObject.SetActive(false);
 		}
 	}
 }
