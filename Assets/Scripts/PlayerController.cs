@@ -25,8 +25,16 @@ public class PlayerController : MonoBehaviour {
 	{
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
-		
-		Vector3 movement = new Vector3 (moveHorizontal, moveVertical, 0.0f);
+		Vector3 movement;
+		if (Input.GetKey ("z")) {
+			movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+			Debug.Log ("z");
+		} else 
+		{
+			Debug.Log ("");
+			
+			movement = new Vector3 (moveHorizontal, moveVertical, 0.0f);
+		}
 		
 		rb.velocity = (movement * speed);
 
