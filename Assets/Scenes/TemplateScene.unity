@@ -175,6 +175,18 @@ Prefab:
       propertyPath: m_TagString
       value: Laser
       objectReference: {fileID: 0}
+    - target: {fileID: 10884752, guid: 8acb8eafabf889841961c56f7851a257, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10884752, guid: 8acb8eafabf889841961c56f7851a257, type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10884752, guid: 8acb8eafabf889841961c56f7851a257, type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8acb8eafabf889841961c56f7851a257, type: 2}
   m_IsPrefabParent: 0
@@ -888,6 +900,18 @@ Prefab:
       propertyPath: m_TagString
       value: Laser
       objectReference: {fileID: 0}
+    - target: {fileID: 10884752, guid: 8acb8eafabf889841961c56f7851a257, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10884752, guid: 8acb8eafabf889841961c56f7851a257, type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10884752, guid: 8acb8eafabf889841961c56f7851a257, type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8acb8eafabf889841961c56f7851a257, type: 2}
   m_IsPrefabParent: 0
@@ -923,7 +947,7 @@ MonoBehaviour:
   - {fileID: 190680, guid: 72776d15a565f3f499c3d02414de971e, type: 2}
   - {fileID: 180238, guid: c49caf18677eba3478784cd2f08b98b8, type: 2}
   - {fileID: 103884, guid: ece113bb09a725547ad15c6e1794fbe0, type: 2}
-  spawnValues: {x: 10, y: 10, z: 30}
+  spawnValues: {x: 5, y: 5, z: 30}
   amountOfAsteroids: 8
   spawnWait: .5
   startWait: 3
