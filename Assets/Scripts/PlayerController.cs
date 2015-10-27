@@ -25,8 +25,15 @@ public class PlayerController : MonoBehaviour {
 	{
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
-		
-		Vector3 movement = new Vector3 (moveHorizontal, moveVertical, 0.0f);
+		Vector3 movement;
+		if (Input.GetKey ("z")) {
+			movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+		} 
+		else 
+		{
+			
+			movement = new Vector3 (moveHorizontal, moveVertical, 0.0f);
+		}
 		
 		rb.velocity = (movement * speed);
 
@@ -40,6 +47,10 @@ public class PlayerController : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Health Pick Up"))
 		{
 			playerHealth.HealPlayer(healAmount);
+			other.gameObject.SetActive (false);
+		}
+		if (other.gameObject.CompareTag ("Shoot Pick Up"))
+		{
 			other.gameObject.SetActive (false);
 		}
 	}

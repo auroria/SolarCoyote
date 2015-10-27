@@ -12,23 +12,31 @@ A. Setup:
 
 B. Doing Work:
 
-1. Open the scene in the "Scenes" folder to open the project.
-2. Make whatever changes.
+1. Make sure "WorkingBranch" is slected.
+2. Go to "History" tab.
+3. Click "Sync."
+4. Open the scene in the "Scenes" folder to open the project.
+5. After you finish with your changes, close Unity.
 
 C. Local Commit:
 
 1. Open Github Desktop.
 2. Confirm that "WorkingBranch" is selected.
-3. Click the "Changes" tab.
-4. Add description to "Summary."
-5. Click Commit to "WorkingBranch."
+3. Go to "History" tab.
+4. Click "Sync."
+5. Open Unity project again and check to see if it still works. If it does, close Unity.
+6. Click the "Changes" tab.
+7. Add description to "Summary."
+8. Click "Commit to WorkingBranch."
 
 Your changes are now commited locally to your local WorkingBranch.
 
 D. Push to Repo:
 
-1. Confirm the "WorkingBranch" is selected.
-2. Click the "Sync" button at the top right.
+1. Open Github Desktop
+2. Confirm that "WorkingBranch" is selected.
+3. Go to "Changes" tab.
+2. Click "Sync."
 
 Your commit is now pushed to the actual WorkingBranch. 
 
