@@ -63,7 +63,11 @@ public class AsteroidHealth : MonoBehaviour {
 		// The enemy is dead.
 		isDead = true;
 
-		gameObject.SetActive(false);
+		//testing destroy vs setting gameobject false
+		Destroy (gameObject);
+		//gameObject.SetActive(false);
+
+
 		// Turn the collider into a trigger so shots can pass through it.
 		//capsuleCollider.isTrigger = true;
 		
