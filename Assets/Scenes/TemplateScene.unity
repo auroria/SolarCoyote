@@ -286,8 +286,8 @@ MonoBehaviour:
     yMax: 4
   playerHealth: {fileID: 297283861}
   playerShooting:
-  - {fileID: 2097682590}
-  - {fileID: 299102146}
+  - {fileID: 0}
+  - {fileID: 0}
   damageFromAsteroids: 5
 --- !u!135 &297283859
 SphereCollider:
@@ -335,12 +335,6 @@ MonoBehaviour:
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: .100000001}
   healFlashColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &299102146 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11477192, guid: 8acb8eafabf889841961c56f7851a257,
-    type: 2}
-  m_PrefabInternal: {fileID: 12945061}
-  m_Script: {fileID: 11500000, guid: 2a68e0eca639ca649af10f54c3f82f12, type: 3}
 --- !u!1001 &563513597
 Prefab:
   m_ObjectHideFlags: 0
@@ -1809,12 +1803,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2076988375}
---- !u!114 &2097682590 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11477192, guid: 8acb8eafabf889841961c56f7851a257,
-    type: 2}
-  m_PrefabInternal: {fileID: 1517613307}
-  m_Script: {fileID: 11500000, guid: 2a68e0eca639ca649af10f54c3f82f12, type: 3}
 --- !u!1 &2123336339
 GameObject:
   m_ObjectHideFlags: 0

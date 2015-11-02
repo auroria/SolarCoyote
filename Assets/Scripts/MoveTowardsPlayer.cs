@@ -41,7 +41,13 @@ public class MoveTowardsPlayer : MonoBehaviour {
 			Destroy (gameObject);
 			Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
 			//PlayerController.GameOver ();
-		} else {
+		} else if (other.gameObject.CompareTag("Health Pick Up")) {
+			return;
+		}
+		else if (other.gameObject.CompareTag("Shoot Pick Up")) {
+			return;
+		}
+		else {
 			Instantiate (explosion, transform.position, transform.rotation);
 			Destroy (other.gameObject);
 			Destroy (gameObject);
