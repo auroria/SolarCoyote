@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Asteroid")) 
 		{
 			playerHealth.TakeDamage(damageFromAsteroids);
-			other.gameObject.SetActive(false);
+			//other.gameObject.SetActive(false);
 		}
 	}
 }

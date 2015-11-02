@@ -14,7 +14,6 @@ GameObject:
   - 114: {fileID: 11414488}
   - 114: {fileID: 11493792}
   - 54: {fileID: 5493848}
-  - 114: {fileID: 11472818}
   m_Layer: 0
   m_Name: Asteroid_H
   m_TagString: Asteroid
@@ -93,19 +92,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 20
   currentHealth: 0
---- !u!114 &11472818
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2077e8d3a2f456408b711e270666515, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosion: {fileID: 100004, guid: a6d58f54ce5934781962a4f887e834f3, type: 2}
-  playerExplosion: {fileID: 0}
 --- !u!114 &11493792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,7 +106,10 @@ MonoBehaviour:
   enemyHealth: {fileID: 11414488}
   damageFromAsteroids: 25
   damageFromLasers: 20
+  damageFromBullets: 15
   speed: 15
+  explosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
+  playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
 --- !u!135 &13525660
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -179,11 +168,11 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: explosion
       value: 
-      objectReference: {fileID: 100004, guid: a6d58f54ce5934781962a4f887e834f3, type: 2}
+      objectReference: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
     - target: {fileID: 0}
       propertyPath: playerExplosion
       value: 
-      objectReference: {fileID: 100004, guid: a6d58f54ce5934781962a4f887e834f3, type: 2}
+      objectReference: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 103884}

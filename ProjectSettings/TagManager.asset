@@ -8,6 +8,7 @@ TagManager:
   - Shoot Pick Up
   - Laser
   - Asteroid
+  - Bullet
   layers:
   - Default
   - TransparentFX
