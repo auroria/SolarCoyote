@@ -27,15 +27,16 @@ public class MoveTowardsPlayer : MonoBehaviour {
 	}
 
 
-	void OnTriggerEnter(Collider other) 
+	void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.CompareTag ("Laser")) {
 			enemyHealth.TakeDamage (damageFromLasers);
-			Destroy (gameObject);
+			//Destroy (gameObject);
 			Instantiate (explosion, transform.position, transform.rotation);
 		} else if (other.gameObject.CompareTag ("Bullet")) {
 			enemyHealth.TakeDamage (damageFromBullets);
-			Destroy (gameObject);
+			Destroy (other.gameObject);					//destroy bullet
+			Destroy (gameObject);						//destroy what is being hit
 			Instantiate (explosion, transform.position, transform.rotation);
 		} else if (other.tag == "Player") {
 			Destroy (gameObject);

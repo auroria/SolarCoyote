@@ -105,8 +105,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: {fileID: 11414488}
   damageFromAsteroids: 25
-  damageFromLasers: 20
-  damageFromBullets: 15
+  damageFromLasers: 5
+  damageFromBullets: 20
   speed: 15
   explosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
   playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
@@ -173,6 +173,14 @@ Prefab:
       propertyPath: playerExplosion
       value: 
       objectReference: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
+    - target: {fileID: 0}
+      propertyPath: damageFromLasers
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: damageFromBullets
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 103884}
