@@ -9,6 +9,7 @@ TagManager:
   - Laser
   - Asteroid
   - Bullet
+  - Particle
   layers:
   - Default
   - TransparentFX

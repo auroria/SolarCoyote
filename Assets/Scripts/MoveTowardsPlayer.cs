@@ -52,6 +52,9 @@ public class MoveTowardsPlayer : MonoBehaviour {
 		else if (other.gameObject.CompareTag("Shoot Pick Up")) {
 			return;
 		}
+		else if (other.gameObject.CompareTag("Particle")) {
+			return;
+		}
 		else {
 			Instantiate (explosion, transform.position, transform.rotation);
 			Destroy (other.gameObject);
