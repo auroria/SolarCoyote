@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11414488}
   - 114: {fileID: 11493792}
   - 54: {fileID: 5493848}
+  - 114: {fileID: 11434816}
   m_Layer: 0
   m_Name: Asteroid_H
   m_TagString: Asteroid
@@ -92,6 +93,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 20
   currentHealth: 0
+--- !u!114 &11434816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a02a475f8019be4d97eeed6110b715a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 10
 --- !u!114 &11493792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -185,6 +198,10 @@ Prefab:
       propertyPath: PickUpToDrop
       value: 
       objectReference: {fileID: 138266, guid: 1835d30eb9c70f1458d6a532ba389ebe, type: 2}
+    - target: {fileID: 0}
+      propertyPath: lifetime
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 103884}

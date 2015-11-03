@@ -961,7 +961,7 @@ MonoBehaviour:
   - {fileID: 190680, guid: 72776d15a565f3f499c3d02414de971e, type: 2}
   - {fileID: 180238, guid: c49caf18677eba3478784cd2f08b98b8, type: 2}
   - {fileID: 103884, guid: ece113bb09a725547ad15c6e1794fbe0, type: 2}
-  spawnValues: {x: 5, y: 5, z: 30}
+  spawnValues: {x: 20, y: 15, z: 50}
   amountOfAsteroids: 8
   spawnWait: .5
   startWait: 3
@@ -1632,7 +1632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 152342, guid: bcf3705aac3409840931d6a30df6f742, type: 2}
-  spawnValues: {x: 15, y: 15, z: 20}
+  spawnValues: {x: 50, y: 50, z: 20}
   particleCount: 20
   spawnWait: .100000001
   startWait: 3
