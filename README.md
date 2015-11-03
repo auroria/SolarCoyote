@@ -38,3 +38,25 @@ D. Push to Repo:
 Your commit is now pushed to the actual WorkingBranch. 
 
 Now repeat B, C, and D.
+
+To Do List:
+
+Non-Gameplay
+
+1. Title Screens
+2. Menu
+3. Game Over Screen
+4. Background Models? (if needed)
+5. Enemy Models? (if needed)
+6. Crosshair Model? (if needed)
+7. Add glowing/fire effects to ship exhaust
+
+Gameplay
+
+1. Barrel Rolls: press button->evasive roll animation->invulnerable to damage
+2. Powerup Rings: randomly spawned powerups
+3. Dynamic Background: planets, asteroids, space stations move around far in background or past the screen
+4. Enemies: move around, shoot at player
+5. Score System: track score, display score
+6. Crosshair: follows mouse
+7. Shooting towards crosshair
