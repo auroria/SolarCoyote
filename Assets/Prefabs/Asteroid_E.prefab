@@ -11,7 +11,6 @@ GameObject:
   - 33: {fileID: 3383324}
   - 23: {fileID: 2332370}
   - 114: {fileID: 11473622}
-  - 114: {fileID: 11419694}
   - 135: {fileID: 13595250}
   - 114: {fileID: 11417208}
   - 54: {fileID: 5459676}
@@ -93,19 +92,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 20
   currentHealth: 0
---- !u!114 &11419694
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 173668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da02152f3640cb54b817ded09310383d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 20
-  currentHealth: 0
 --- !u!114 &11473622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,10 +103,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5268a576a44dfec419a3264e7beefb9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: {fileID: 11419694}
   damageFromAsteroids: 25
-  damageFromLasers: 5
-  damageFromBullets: 20
+  damageFromLasers: 20
+  damageFromBullets: 5
   speed: 5
   explosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
   playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
@@ -154,7 +139,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: enemyHealth
       value: 
-      objectReference: {fileID: 11419694}
+      objectReference: {fileID: 11417208}
     - target: {fileID: 0}
       propertyPath: speed
       value: 5
@@ -193,11 +178,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: damageFromLasers
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: damageFromBullets
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

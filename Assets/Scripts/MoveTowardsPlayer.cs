@@ -3,10 +3,10 @@ using System.Collections;
 
 public class MoveTowardsPlayer : MonoBehaviour {
 
-	public AsteroidHealth enemyHealth;        // Reference to this enemy's health.
+	AsteroidHealth enemyHealth;        // Reference to this enemy's health.
 	public int damageFromAsteroids = 25;
 	public int damageFromLasers = 20;
-	public int damageFromBullets = 15;
+	public int damageFromBullets = 10;
 	
 	private Rigidbody rb;
 	public int speed;
@@ -17,6 +17,7 @@ public class MoveTowardsPlayer : MonoBehaviour {
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>();	
+		enemyHealth = GetComponent<AsteroidHealth> ();
 	}
 
 	
@@ -36,7 +37,7 @@ public class MoveTowardsPlayer : MonoBehaviour {
 		} else if (other.gameObject.CompareTag ("Bullet")) {
 			enemyHealth.TakeDamage (damageFromBullets);
 			Destroy (other.gameObject);					//destroy bullet
-			Destroy (gameObject);						//destroy what is being hit
+			//Destroy (gameObject);						//destroy what is being hit
 			Instantiate (explosion, transform.position, transform.rotation);
 		} else if (other.tag == "Player") {
 			Destroy (gameObject);
