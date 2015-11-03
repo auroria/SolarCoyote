@@ -109,6 +109,7 @@ MonoBehaviour:
   speed: 15
   explosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
   playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
+  PickUpToDrop: {fileID: 138266, guid: 1835d30eb9c70f1458d6a532ba389ebe, type: 2}
 --- !u!135 &13525660
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -180,6 +181,10 @@ Prefab:
       propertyPath: damageFromBullets
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: PickUpToDrop
+      value: 
+      objectReference: {fileID: 138266, guid: 1835d30eb9c70f1458d6a532ba389ebe, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 103884}

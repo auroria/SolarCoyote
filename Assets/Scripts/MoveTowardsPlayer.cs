@@ -13,6 +13,7 @@ public class MoveTowardsPlayer : MonoBehaviour {
 
 	public GameObject explosion;
 	public GameObject playerExplosion;
+    public GameObject PickUpToDrop;
 	
 	void Start ()
 	{
@@ -34,12 +35,14 @@ public class MoveTowardsPlayer : MonoBehaviour {
 			enemyHealth.TakeDamage (damageFromLasers);
 			//Destroy (gameObject);
 			Instantiate (explosion, transform.position, transform.rotation);
-		} else if (other.gameObject.CompareTag ("Bullet")) {
+            Instantiate(PickUpToDrop, transform.position, transform.rotation);
+        } else if (other.gameObject.CompareTag ("Bullet")) {
 			enemyHealth.TakeDamage (damageFromBullets);
 			Destroy (other.gameObject);					//destroy bullet
 			//Destroy (gameObject);						//destroy what is being hit
 			Instantiate (explosion, transform.position, transform.rotation);
-		} else if (other.tag == "Player") {
+            Instantiate(PickUpToDrop, transform.position, transform.rotation);
+        } else if (other.tag == "Player") {
 			Destroy (gameObject);
 			Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
 			//PlayerController.GameOver ();
