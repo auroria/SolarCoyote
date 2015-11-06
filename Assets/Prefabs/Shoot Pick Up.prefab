@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a02a475f8019be4d97eeed6110b715a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 3
+  lifetime: 10
 --- !u!114 &11433760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -136,7 +136,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: d5e3b04bd2e950f49a7d1ee939d62d5e, type: 2}
     - target: {fileID: 0}
       propertyPath: lifetime
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed
