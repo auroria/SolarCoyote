@@ -13,7 +13,7 @@ public class MoveTowardsPlayer : MonoBehaviour {
 
 	public GameObject explosion;
 	public GameObject playerExplosion;
-    public GameObject PickUpToDrop;
+    public GameObject[] PickUpToDrop;
 	
 	void Start ()
 	{
@@ -31,11 +31,12 @@ public class MoveTowardsPlayer : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
+		int objectIndex = Random.Range (0, PickUpToDrop.Length);
 		if (other.gameObject.CompareTag ("Laser")) {
 			enemyHealth.TakeDamage (damageFromLasers);
 			//Destroy (gameObject);
 			Instantiate (explosion, transform.position, transform.rotation);
-            Instantiate(PickUpToDrop, transform.position, transform.rotation);
+            Instantiate(PickUpToDrop[objectIndex], transform.position, transform.rotation);
         } else if (other.gameObject.CompareTag ("Bullet")) {
 			enemyHealth.TakeDamage (damageFromBullets);
 			Destroy (other.gameObject);					//destroy bullet
@@ -43,7 +44,8 @@ public class MoveTowardsPlayer : MonoBehaviour {
 			Instantiate (explosion, transform.position, transform.rotation);
 			if(enemyHealth.isDead)
 			{
-            	Instantiate(PickUpToDrop, transform.position, transform.rotation);
+
+            	Instantiate(PickUpToDrop[objectIndex], transform.position, transform.rotation);
 			}
         } else if (other.tag == "Player") {
 			Destroy (gameObject);

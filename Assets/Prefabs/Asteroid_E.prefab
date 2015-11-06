@@ -93,6 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 20
   currentHealth: 0
+  isDead: 0
 --- !u!114 &11427854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -122,7 +123,9 @@ MonoBehaviour:
   speed: 5
   explosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
   playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
-  PickUpToDrop: {fileID: 138266, guid: 1835d30eb9c70f1458d6a532ba389ebe, type: 2}
+  PickUpToDrop:
+  - {fileID: 138266, guid: 1835d30eb9c70f1458d6a532ba389ebe, type: 2}
+  - {fileID: 187380, guid: a079f98244fc87b48ab7853d5827d612, type: 2}
 --- !u!135 &13595250
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -142,6 +145,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: PickUpToDrop.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: Asteroid
