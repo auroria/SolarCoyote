@@ -17,10 +17,17 @@ public class PlayerController : MonoBehaviour {
 	public PlayerHealth playerHealth;
 	public PlayerShooting[] playerShooting;
 	public int damageFromAsteroids;
+	public int damageToIncreaseBullet;
+	public float speedToIncreaseLaserFrequency;
+	public MoveTowardsPlayer[] moveToPlayer;
 
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>();
+		foreach (var item in moveToPlayer) 
+		{
+			item.damageFromBullets = 5;
+		}
 	}
 	
 	void FixedUpdate ()
@@ -55,7 +62,7 @@ public class PlayerController : MonoBehaviour {
 		{
 			foreach(var item in playerShooting)
 			{
-				item.timeBetweenBullets-= .3f;
+				item.timeBetweenBullets-= speedToIncreaseLaserFrequency;
 			}
 
 			other.gameObject.SetActive (false);
@@ -64,6 +71,14 @@ public class PlayerController : MonoBehaviour {
 		{
 			playerHealth.TakeDamage(damageFromAsteroids);
 			//other.gameObject.SetActive(false);
+		}
+		if (other.gameObject.CompareTag ("Bullet Pick Up"))
+		{
+			foreach(var item in moveToPlayer)
+			{
+				item.damageFromBullets += damageToIncreaseBullet;
+			}
+			other.gameObject.SetActive (false);
 		}
 	}
 }

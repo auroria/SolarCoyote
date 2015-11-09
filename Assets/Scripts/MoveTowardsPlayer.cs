@@ -6,7 +6,7 @@ public class MoveTowardsPlayer : MonoBehaviour {
 	AsteroidHealth enemyHealth;        // Reference to this enemy's health.
 	public int damageFromAsteroids = 25;
 	public int damageFromLasers = 20;
-	public int damageFromBullets = 10;
+	public int damageFromBullets;
 	
 	private Rigidbody rb;
 	public int speed;
@@ -44,7 +44,7 @@ public class MoveTowardsPlayer : MonoBehaviour {
 			Instantiate (explosion, transform.position, transform.rotation);
 			if(enemyHealth.isDead)
 			{
-
+	
             	Instantiate(PickUpToDrop[objectIndex], transform.position, transform.rotation);
 			}
         } else if (other.tag == "Player") {
@@ -54,6 +54,9 @@ public class MoveTowardsPlayer : MonoBehaviour {
 			return;
 		}
 		else if (other.gameObject.CompareTag("Shoot Pick Up")) {
+			return;
+		}
+		else if (other.gameObject.CompareTag("Bullet Pick Up")) {
 			return;
 		}
 		else if (other.gameObject.CompareTag("Particle")) {

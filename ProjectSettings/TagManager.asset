@@ -10,6 +10,7 @@ TagManager:
   - Asteroid
   - Bullet
   - Particle
+  - Bullet Pick Up
   layers:
   - Default
   - TransparentFX

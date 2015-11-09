@@ -1,76 +1,75 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &190680
+--- !u!1 &156790
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 449400}
-  - 33: {fileID: 3339702}
-  - 23: {fileID: 2310886}
-  - 135: {fileID: 13599200}
-  - 114: {fileID: 11498336}
-  - 114: {fileID: 11475126}
-  - 54: {fileID: 5438158}
-  - 114: {fileID: 11487280}
+  - 4: {fileID: 472808}
+  - 33: {fileID: 3329246}
+  - 135: {fileID: 13506202}
+  - 23: {fileID: 2319064}
+  - 54: {fileID: 5475998}
+  - 114: {fileID: 11418596}
+  - 114: {fileID: 11423950}
   m_Layer: 0
-  m_Name: Asteroid_F
-  m_TagString: Asteroid
+  m_Name: Bullet Pick Up
+  m_TagString: Bullet Pick Up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &449400
+--- !u!4 &472808
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190680}
+  m_GameObject: {fileID: 156790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 120, y: 120, z: 120}
+  m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &2310886
+--- !u!23 &2319064
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190680}
+  m_GameObject: {fileID: 156790}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: cd7d216b7c1e38144b2a126602471ce9, type: 2}
+  - {fileID: 2100000, guid: 245cd199d51a07a4c84b6881214971a9, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
+  m_PreserveUVs: 1
   m_ImportantGI: 0
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3339702
+--- !u!33 &3329246
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190680}
-  m_Mesh: {fileID: 4300002, guid: 38c445290885e384197c7c05e3d49f5f, type: 3}
---- !u!54 &5438158
+  m_GameObject: {fileID: 156790}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &5475998
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190680}
+  m_GameObject: {fileID: 156790}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -80,65 +79,42 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &11475126
+--- !u!114 &11418596
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da02152f3640cb54b817ded09310383d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 30
-  currentHealth: 0
-  isDead: 0
---- !u!114 &11487280
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190680}
+  m_GameObject: {fileID: 156790}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a02a475f8019be4d97eeed6110b715a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 15
---- !u!114 &11498336
+  lifetime: 10
+--- !u!114 &11423950
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190680}
+  m_GameObject: {fileID: 156790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5268a576a44dfec419a3264e7beefb9e, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e4350bac7b06b246a9b65db59272d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageFromAsteroids: 25
-  damageFromLasers: 20
-  damageFromBullets: 11
   speed: 5
-  explosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
-  PickUpToDrop:
-  - {fileID: 138266, guid: 1835d30eb9c70f1458d6a532ba389ebe, type: 2}
-  - {fileID: 187380, guid: a079f98244fc87b48ab7853d5827d612, type: 2}
-  - {fileID: 156790, guid: 8c7467fb3eeadd1449fd2af5715063c2, type: 2}
---- !u!135 &13599200
+--- !u!135 &13506202
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190680}
+  m_GameObject: {fileID: 156790}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .00826301333
-  m_Center: {x: -.000514544779, y: .00112580974, z: .000199886505}
+  m_Radius: .5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -147,70 +123,50 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
-      propertyPath: PickUpToDrop.Array.size
-      value: 3
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
-      propertyPath: m_TagString
-      value: Asteroid
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
-      propertyPath: m_IsTrigger
-      value: 1
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.z
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: lifetime
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
-      propertyPath: enemyHealth
-      value: 
-      objectReference: {fileID: 11475126}
-    - target: {fileID: 0}
-      propertyPath: m_LocalScale.x
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalScale.y
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalScale.z
-      value: 120
+      propertyPath: m_TagString
+      value: Bullet Pick Up
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: explosion
-      value: 
-      objectReference: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-    - target: {fileID: 0}
-      propertyPath: playerExplosion
-      value: 
-      objectReference: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
-    - target: {fileID: 0}
-      propertyPath: damageFromLasers
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: damageFromBullets
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: PickUpToDrop
-      value: 
-      objectReference: {fileID: 138266, guid: 1835d30eb9c70f1458d6a532ba389ebe, type: 2}
-    - target: {fileID: 0}
-      propertyPath: lifetime
-      value: 15
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 190680}
+  m_RootGameObject: {fileID: 156790}
   m_IsPrefabParent: 1

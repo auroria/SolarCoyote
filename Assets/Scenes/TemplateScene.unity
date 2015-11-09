@@ -336,7 +336,14 @@ MonoBehaviour:
   playerShooting:
   - {fileID: 8479497}
   - {fileID: 1157918796}
-  damageFromAsteroids: 20
+  damageFromAsteroids: 25
+  damageToIncreaseBullet: 3
+  speedToIncreaseLaserFrequency: .200000003
+  moveToPlayer:
+  - {fileID: 11473622, guid: 965a95650c5ae2a48b35aa03ca4a0a31, type: 2}
+  - {fileID: 11498336, guid: 72776d15a565f3f499c3d02414de971e, type: 2}
+  - {fileID: 11449188, guid: c49caf18677eba3478784cd2f08b98b8, type: 2}
+  - {fileID: 11493792, guid: ece113bb09a725547ad15c6e1794fbe0, type: 2}
 --- !u!135 &297283859
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -569,7 +576,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!1 &1035216290
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,7 +975,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!1 &1366836471 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 180104, guid: fefeb803921ae144bbf6f0dd7ceb2ca6, type: 2}
@@ -1125,7 +1132,7 @@ MonoBehaviour:
   - {fileID: 190680, guid: 72776d15a565f3f499c3d02414de971e, type: 2}
   - {fileID: 180238, guid: c49caf18677eba3478784cd2f08b98b8, type: 2}
   - {fileID: 103884, guid: ece113bb09a725547ad15c6e1794fbe0, type: 2}
-  spawnValues: {x: 20, y: 15, z: 50}
+  spawnValues: {x: 15, y: 10, z: 50}
   amountOfAsteroids: 8
   spawnWait: .5
   startWait: 7
@@ -1141,7 +1148,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1 &1541211825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,7 +1782,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!114 &2070236547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1854,48 +1861,3 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2076988375}
---- !u!1 &2123336339
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2123336341}
-  - 114: {fileID: 2123336340}
-  m_Layer: 0
-  m_Name: PickUpManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2123336340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2123336339}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33047c948679c004ab8d5c823d618b7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: {fileID: 297283861}
-  pickUp:
-  - {fileID: 138266, guid: 1835d30eb9c70f1458d6a532ba389ebe, type: 2}
-  - {fileID: 187380, guid: a079f98244fc87b48ab7853d5827d612, type: 2}
-  maxSpawnTime: 10
-  spawnPoints: []
---- !u!4 &2123336341
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2123336339}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9

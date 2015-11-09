@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da02152f3640cb54b817ded09310383d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 20
+  startingHealth: 30
   currentHealth: 0
   isDead: 0
 --- !u!114 &11434816
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a02a475f8019be4d97eeed6110b715a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 10
+  lifetime: 15
 --- !u!114 &11493792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,13 +119,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageFromAsteroids: 25
   damageFromLasers: 20
-  damageFromBullets: 5
+  damageFromBullets: 11
   speed: 15
   explosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
   playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
   PickUpToDrop:
   - {fileID: 138266, guid: 1835d30eb9c70f1458d6a532ba389ebe, type: 2}
   - {fileID: 187380, guid: a079f98244fc87b48ab7853d5827d612, type: 2}
+  - {fileID: 156790, guid: 8c7467fb3eeadd1449fd2af5715063c2, type: 2}
 --- !u!135 &13525660
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -147,7 +148,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: PickUpToDrop.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_TagString
@@ -207,7 +208,7 @@ Prefab:
       objectReference: {fileID: 138266, guid: 1835d30eb9c70f1458d6a532ba389ebe, type: 2}
     - target: {fileID: 0}
       propertyPath: lifetime
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
