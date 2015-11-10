@@ -12,8 +12,11 @@ public class PlayerController : MonoBehaviour {
 	public int healAmount = 10;
 	public float speed;
     public float tilt;
+    public float rollSpeed;
+    public float rollTilt;
     public Boundary bound;
 	private Rigidbody rb;
+    private Collider coll;
 	public PlayerHealth playerHealth;
 	public PlayerShooting[] playerShooting;
 	public int damageFromAsteroids;
@@ -24,6 +27,7 @@ public class PlayerController : MonoBehaviour {
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>();
+        coll = GetComponent<Collider>();
 		foreach (var item in moveToPlayer) 
 		{
 			item.damageFromBullets = 5;
@@ -32,23 +36,24 @@ public class PlayerController : MonoBehaviour {
 	
 	void FixedUpdate ()
 	{
-		float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
-		Vector3 movement;
-		if (Input.GetKey ("z")) {
-			movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-		} 
-		else 
-		{
-			
-			movement = new Vector3 (moveHorizontal, moveVertical, 0.0f);
-		}
-		
-		rb.velocity = (movement * speed);
+        if (Input.GetKey("z"))
+        {
+            DoBarrelRoll();
+        }
+        else
+        {
+            coll.enabled = true;
 
-        rb.position = new Vector3(Mathf.Clamp(rb.position.x, bound.xMin, bound.xMax), Mathf.Clamp(rb.position.y, bound.yMin, bound.yMax), rb.position.z);
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVertical = Input.GetAxis("Vertical");
+            Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0.0f);
 
-        rb.rotation = Quaternion.Euler(rb.velocity.y * -tilt, 0.0f, rb.velocity.x * -tilt);
+            rb.velocity = (movement * speed);
+
+            rb.position = new Vector3(Mathf.Clamp(rb.position.x, bound.xMin, bound.xMax), Mathf.Clamp(rb.position.y, bound.yMin, bound.yMax), rb.position.z);
+
+            rb.rotation = Quaternion.Euler(rb.velocity.y * -tilt, 0.0f, rb.velocity.x * -tilt);
+        }
 	}
 	
 	void OnTriggerEnter(Collider other) 
@@ -81,4 +86,19 @@ public class PlayerController : MonoBehaviour {
 			other.gameObject.SetActive (false);
 		}
 	}
+
+    void DoBarrelRoll()
+    {
+        coll.enabled = false;
+
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+        Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0.0f);
+
+        rb.velocity = (movement * rollSpeed);
+
+        rb.position = new Vector3(Mathf.Clamp(rb.position.x, bound.xMin, bound.xMax), Mathf.Clamp(rb.position.y, bound.yMin, bound.yMax), rb.position.z);
+
+        rb.AddTorque(0.0f, 0.0f, moveHorizontal * -rollTilt);
+    }
 }
