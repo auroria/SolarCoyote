@@ -7,7 +7,7 @@ public class Done_DestroyByContact : MonoBehaviour
 	public GameObject playerExplosion;
 	public int scoreValue;
 	private Done_GameController gameController;
-
+	
 	void Start ()
 	{
 		GameObject gameControllerObject = GameObject.FindGameObjectWithTag ("GameController");
@@ -20,19 +20,19 @@ public class Done_DestroyByContact : MonoBehaviour
 			Debug.Log ("Cannot find 'GameController' script");
 		}
 	}
-
+	
 	void OnTriggerEnter (Collider other)
 	{
 		if (other.tag == "Boundary" || other.tag == "Enemy")
 		{
 			return;
 		}
-
+		
 		if (explosion != null)
 		{
 			Instantiate(explosion, transform.position, transform.rotation);
 		}
-
+		
 		if (other.tag == "Player")
 		{
 			Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
