@@ -9,7 +9,7 @@ public class Done_GameController : MonoBehaviour
 	public float spawnWait;
 	public float startWait;
 	public float waveWait;
-	
+	public float changeLevelAtScore = 500.0f;
 	public GUIText scoreText;
 	public GUIText restartText;
 	public GUIText gameOverText;
@@ -69,7 +69,7 @@ public class Done_GameController : MonoBehaviour
 		score += newScoreValue;
 		UpdateScore ();
 
-		if (score >= 100) 
+		if (score >= changeLevelAtScore) 
 		{
 			//yield return new WaitForSeconds(5);
 			if(Application.loadedLevelName=="Done_Main"){
