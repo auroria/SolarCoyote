@@ -15,8 +15,11 @@ GameObject:
   - 54: {fileID: 5472234}
   - 114: {fileID: 11434164}
   - 114: {fileID: 11470076}
+  - 114: {fileID: 11483366}
+  - 114: {fileID: 11482306}
+  - 114: {fileID: 11470126}
   m_Layer: 0
-  m_Name: Health Pick Up
+  m_Name: Done_HealthPickUp
   m_TagString: Health Pick Up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +101,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138266}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d3c9ff287b0413459746a58e3a931ee, type: 3}
   m_Name: 
@@ -109,7 +112,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138266}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a02a475f8019be4d97eeed6110b715a, type: 3}
   m_Name: 
@@ -121,12 +124,51 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138266}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e4350bac7b06b246a9b65db59272d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &11470126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f7850f24249e4056b2189de03ae584c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -5
+--- !u!114 &11482306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8846417901f4942d2a5fa9e32ce69d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 100004, guid: a6d58f54ce5934781962a4f887e834f3, type: 2}
+  playerExplosion: {fileID: 100008, guid: 3455fe69f7ddc4604b95bf9b0a1e88d7, type: 2}
+  scoreValue: 10
+  healthPickUp: {fileID: 0}
+--- !u!114 &11483366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c19560e3c6a341e48361ef8c42b3609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tumble: 5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -156,11 +198,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed
-      value: 5
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_UseGravity
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tumble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: scoreValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 100004, guid: a6d58f54ce5934781962a4f887e834f3, type: 2}
+    - target: {fileID: 0}
+      propertyPath: playerExplosion
+      value: 
+      objectReference: {fileID: 100008, guid: 3455fe69f7ddc4604b95bf9b0a1e88d7, type: 2}
+    - target: {fileID: 0}
+      propertyPath: healthPickUp
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
