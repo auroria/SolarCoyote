@@ -4,4 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Done/Done_Scenes/Done_Scene1.unity
+  - enabled: 1
+    path: Assets/Done/Done_Scenes/Done_Main.unity

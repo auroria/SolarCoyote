@@ -68,6 +68,18 @@ public class Done_GameController : MonoBehaviour
 	{
 		score += newScoreValue;
 		UpdateScore ();
+
+		if (score >= 100) 
+		{
+			//yield return new WaitForSeconds(5);
+			if(Application.loadedLevelName=="Done_Main"){
+				Application.LoadLevel("Done_Scene1");
+
+			}
+			else{
+				Application.LoadLevel("Done_Main");
+			}
+		}
 	}
 	
 	void UpdateScore ()
