@@ -294,6 +294,8 @@ MonoBehaviour:
   boundary:
     xMin: -6
     xMax: 6
+    yMin: -10
+    yMax: 10
     zMin: -20
     zMax: 20
   tilt: 10
@@ -1400,6 +1402,14 @@ Prefab:
       propertyPath: healthPickUp
       value: 
       objectReference: {fileID: 138266, guid: 1835d30eb9c70f1458d6a532ba389ebe, type: 2}
+    - target: {fileID: 0}
+      propertyPath: boundary.yMin
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: boundary.yMax
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100002}

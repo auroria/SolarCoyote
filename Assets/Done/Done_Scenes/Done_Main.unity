@@ -725,7 +725,7 @@ Transform:
   m_GameObject: {fileID: 1112871355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 15, y: 1, z: 20}
+  m_LocalScale: {x: 20, y: 20, z: 40}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -1881,14 +1881,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   tilt: 5
+  rollSpeed: 10
+  rollTilt: 15
   boundary:
-    xMin: -6
-    xMax: 6
-    zMin: -4
-    zMax: 8
+    xMin: 0
+    xMax: 0
+    yMin: 0
+    yMax: 0
+    zMin: 0
+    zMax: 0
   shot: {fileID: 100000, guid: f4ec271e525e14ca9927a07e6a2e153d, type: 2}
   shotSpawn: {fileID: 1311627394}
   fireRate: .25
+  bound:
+    xMin: -6
+    xMax: 6
+    yMin: -4
+    yMax: 4
 --- !u!64 &1755769566
 MeshCollider:
   m_ObjectHideFlags: 0

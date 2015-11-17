@@ -4,13 +4,15 @@ using System.Collections;
 [System.Serializable]
 public class Done_Boundary 
 {
-	public float xMin, xMax, zMin, zMax;
+	public float xMin, xMax, yMin, yMax, zMin, zMax;
 }
 
 public class Done_PlayerController : MonoBehaviour
 {
 	public float speed;
 	public float tilt;
+	public float rollSpeed;
+	public float rollTilt;
 	public Done_Boundary boundary;
 
 	public GameObject shot;
@@ -18,7 +20,17 @@ public class Done_PlayerController : MonoBehaviour
 	public float fireRate;
 	 
 	private float nextFire;
-	
+
+	public Boundary bound;
+	private Rigidbody rb;
+	private Collider coll;
+
+	void Start ()
+	{
+		rb = GetComponent<Rigidbody> ();
+		coll = GetComponent<Collider> ();
+	}
+
 	void Update ()
 	{
 		if (Input.GetButton("Fire1") && Time.time > nextFire) 
@@ -31,19 +43,38 @@ public class Done_PlayerController : MonoBehaviour
 
 	void FixedUpdate ()
 	{
-		float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
+		if (Input.GetKey("z"))
+		{
+			DoBarrelRoll();
+		}
+		else
+		{
+			coll.enabled = true;
+			
+			float moveHorizontal = Input.GetAxis("Horizontal");
+			float moveVertical = Input.GetAxis("Vertical");
+			Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0.0f);
+			
+			rb.velocity = (movement * speed);
+			
+			rb.position = new Vector3(Mathf.Clamp(rb.position.x, bound.xMin, bound.xMax), Mathf.Clamp(rb.position.y, bound.yMin, bound.yMax), rb.position.z);
+			
+			rb.rotation = Quaternion.Euler(rb.velocity.y * -tilt, 0.0f, rb.velocity.x * -tilt);
+		}
+	}
 
-		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-		GetComponent<Rigidbody>().velocity = movement * speed;
+	void DoBarrelRoll()
+	{
+		coll.enabled = false;
 		
-		GetComponent<Rigidbody>().position = new Vector3
-		(
-			Mathf.Clamp (GetComponent<Rigidbody>().position.x, boundary.xMin, boundary.xMax), 
-			0.0f, 
-			Mathf.Clamp (GetComponent<Rigidbody>().position.z, boundary.zMin, boundary.zMax)
-		);
+		float moveHorizontal = Input.GetAxis("Horizontal");
+		float moveVertical = Input.GetAxis("Vertical");
+		Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0.0f);
 		
-		GetComponent<Rigidbody>().rotation = Quaternion.Euler (0.0f, 0.0f, GetComponent<Rigidbody>().velocity.x * -tilt);
+		rb.velocity = (movement * rollSpeed);
+		
+		rb.position = new Vector3(Mathf.Clamp(rb.position.x, bound.xMin, bound.xMax), Mathf.Clamp(rb.position.y, bound.yMin, bound.yMax), rb.position.z);
+		
+		rb.AddTorque(0.0f, 0.0f, moveHorizontal * -rollTilt);
 	}
 }
