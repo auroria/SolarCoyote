@@ -2180,7 +2180,7 @@ MonoBehaviour:
   spawnValues: {x: 6, y: 5, z: 16}
   hazardCount: 15
   spawnWait: .75
-  startWait: 1
+  startWait: 5
   waveWait: 4
   scoreText: {fileID: 1171993750}
   restartText: {fileID: 1363831536}
