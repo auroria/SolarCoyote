@@ -8,7 +8,8 @@ public class Done_DestroyByContact : MonoBehaviour
 	public int scoreValue;
 	private Done_GameController gameController;
 	private Done_HealthBar hb;
-	public GameObject healthPickUp;
+	public float speedToIncreaseLaserFrequency = .1f;
+	public GameObject[] pickUps;
 
 	void Start ()
 	{
@@ -45,7 +46,13 @@ public class Done_DestroyByContact : MonoBehaviour
 			if (this.tag == "Health Pick Up") {
 				hb.setPlayerHealth (hb.getPlayerHealth () + 10);
 				hb.SetCurrentHealth (hb.getPlayerHealth ());
-			}else{ //player collides with hazard
+			}
+			else if(this.tag == "Shoot Pick Up")
+			{
+				GameObject.FindGameObjectWithTag ("Player").GetComponent<Done_PlayerController>().fireRate -= .05f;
+			}
+			else
+			{ //player collides with hazard
 				hb.setPlayerHealth (hb.getPlayerHealth () - 10);
 				hb.SetCurrentHealth (hb.getPlayerHealth ());
 			}
@@ -65,8 +72,17 @@ public class Done_DestroyByContact : MonoBehaviour
 					hb.SetCurrentHealth (hb.getPlayerHealth ());
 				}
 			}
+			if(this.tag == "Shoot Pick Up" && (other.tag == "Bullet" || other.tag == "Laser"))
+			{
+				GameObject.FindGameObjectWithTag ("Player").GetComponent<Done_PlayerController>().fireRate -= .05f;
+			}
+
+			int objectIndex = Random.Range (0, pickUps.Length+1);
 			gameController.AddScore (scoreValue);
-			Instantiate(healthPickUp, transform.position, transform.rotation);
+			if(objectIndex < pickUps.Length)
+			{
+				Instantiate(pickUps[objectIndex], transform.position, transform.rotation);
+			}
 		}
 	}
 
