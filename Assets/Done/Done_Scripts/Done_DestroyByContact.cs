@@ -56,6 +56,15 @@ public class Done_DestroyByContact : MonoBehaviour
 				Destroy (other.gameObject);
 			}
 		} else {
+			if(this.tag == "Health Pick Up" && (other.tag == "Bullet" || other.tag == "Laser"))
+			{
+				hb = GameObject.FindGameObjectWithTag ("Player").GetComponent<Done_HealthBar> ();
+				if(hb.getPlayerHealth() < 100)
+				{
+					hb.setPlayerHealth (hb.getPlayerHealth () + 10);
+					hb.SetCurrentHealth (hb.getPlayerHealth ());
+				}
+			}
 			gameController.AddScore (scoreValue);
 			Instantiate(healthPickUp, transform.position, transform.rotation);
 		}
