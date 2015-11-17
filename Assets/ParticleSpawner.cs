@@ -16,7 +16,6 @@ public class ParticleSpawner : MonoBehaviour {
 	void Spawn()
 	{
 		int objectIndex = Random.Range (0, environmentsToSpawn.Length);
-		Debug.Log (objectIndex);
 		Instantiate (environmentsToSpawn[objectIndex], spawnPoint.position, spawnPoint.rotation);
 	}
 }
