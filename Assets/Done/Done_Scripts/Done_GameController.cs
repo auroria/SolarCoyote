@@ -9,7 +9,12 @@ public class Done_GameController : MonoBehaviour
 	public float spawnWait;
 	public float startWait;
 	public float waveWait;
+<<<<<<< HEAD
 	public float changeLevelAtScore = 500.0f;
+=======
+	public float scoreToChangeLevels = 400f;
+	
+>>>>>>> origin/TestBranch
 	public GUIText scoreText;
 	public GUIText restartText;
 	public GUIText gameOverText;
@@ -69,7 +74,11 @@ public class Done_GameController : MonoBehaviour
 		score += newScoreValue;
 		UpdateScore ();
 
+<<<<<<< HEAD
 		if (score >= changeLevelAtScore) 
+=======
+		if (score >= scoreToChangeLevels) 
+>>>>>>> origin/TestBranch
 		{
 			//yield return new WaitForSeconds(5);
 			if(Application.loadedLevelName=="Done_Main"){

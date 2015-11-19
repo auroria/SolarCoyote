@@ -122,7 +122,11 @@ MonoBehaviour:
   explosion: {fileID: 100004, guid: a6d58f54ce5934781962a4f887e834f3, type: 2}
   playerExplosion: {fileID: 100008, guid: 3455fe69f7ddc4604b95bf9b0a1e88d7, type: 2}
   scoreValue: 10
+<<<<<<< HEAD
   speedToIncreaseLaserFrequency: .100000001
+=======
+  speedToIncreaseLaserFrequency: .400000006
+>>>>>>> origin/TestBranch
   pickUps:
   - {fileID: 138266, guid: 1835d30eb9c70f1458d6a532ba389ebe, type: 2}
   - {fileID: 187380, guid: 58a9b8a4323d13746af70cce83fbeaa7, type: 2}
