@@ -267,7 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 100012, guid: 160925a6fe2664f2a978566b819f0af0, type: 2}
   playerExplosion: {fileID: 100008, guid: 3455fe69f7ddc4604b95bf9b0a1e88d7, type: 2}
-  scoreValue: 20
+  scoreValue: 50
   speedToIncreaseLaserFrequency: .100000001
   pickUps:
   - {fileID: 138266, guid: 1835d30eb9c70f1458d6a532ba389ebe, type: 2}
@@ -1393,6 +1393,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: delay
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: scoreValue
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -2212,17 +2212,13 @@ MonoBehaviour:
   - {fileID: 100002, guid: afc18fc39ade3744397c0c993b57be53, type: 2}
   - {fileID: 100002, guid: afc18fc39ade3744397c0c993b57be53, type: 2}
   - {fileID: 100002, guid: afc18fc39ade3744397c0c993b57be53, type: 2}
-  - {fileID: 101840, guid: 51897b1c8749f5f4ea4c13de609ce747, type: 2}
+  - {fileID: 177144, guid: d7e42cc657d21cd40b0f53ec79356fda, type: 2}
   spawnValues: {x: 6, y: 5, z: 16}
   hazardCount: 20
   spawnWait: .75
   startWait: 5
   waveWait: 4
-<<<<<<< HEAD
-  changeLevelAtScore: 500
-=======
-  scoreToChangeLevels: 400
->>>>>>> origin/TestBranch
+  changeLevelAtScore: 100
   scoreText: {fileID: 1171993750}
   restartText: {fileID: 1363831536}
   gameOverText: {fileID: 2126980976}
