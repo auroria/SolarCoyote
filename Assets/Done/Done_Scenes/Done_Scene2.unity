@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
-  m_SkyboxMaterial: {fileID: 2100000, guid: e980bc7fbb00dc34b86b95ac842d1920, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 88ec9a13802800449aaf825aff3aadc7, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -624,8 +624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3844718250cbd5e4d927f4c8dd7dd7b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  environmentsToSpawn:
-  - {fileID: 145594, guid: a728ce26baa181343b965904761e4340, type: 2}
+  environmentsToSpawn: []
   maxSpawnTime: 5
   spawnPoint: {fileID: 893053762}
 --- !u!4 &568425555
@@ -1929,26 +1928,6 @@ Prefab:
     - target: {fileID: 455264, guid: df5f76c77be83cc43886fa83cdbadf57, type: 2}
       propertyPath: m_RootOrder
       value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 19854482, guid: df5f76c77be83cc43886fa83cdbadf57, type: 2}
-      propertyPath: InitialModule.maxNumParticles
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 139448, guid: df5f76c77be83cc43886fa83cdbadf57, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 177444, guid: df5f76c77be83cc43886fa83cdbadf57, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 168290, guid: df5f76c77be83cc43886fa83cdbadf57, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 120976, guid: df5f76c77be83cc43886fa83cdbadf57, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df5f76c77be83cc43886fa83cdbadf57, type: 2}

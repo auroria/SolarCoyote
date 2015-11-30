@@ -36,7 +36,7 @@ public class Done_GameController : MonoBehaviour
 		{
 			if (Input.GetKeyDown (KeyCode.R))
 			{
-				Application.LoadLevel (Application.loadedLevel);
+				Application.LoadLevel ("Done_Main");
 			}
 		}
 	}
@@ -73,14 +73,28 @@ public class Done_GameController : MonoBehaviour
 		if (score >= changeLevelAtScore) 
 		{
 			//yield return new WaitForSeconds(5);
-			if(Application.loadedLevelName=="Done_Main"){
+			if(Application.loadedLevelName=="Done_Main")
+            {
 				Application.LoadLevel("Done_Scene1");
 
 			}
-			else{
-				Application.LoadLevel("Done_Main");
+			else if(Application.loadedLevelName == "Done_Scene1")
+            {
+				Application.LoadLevel("Done_Scene2");
 			}
-		}
+            else if (Application.loadedLevelName == "Done_Scene2")
+            {
+                Application.LoadLevel("Done_Scene3");
+            }
+            else if (Application.loadedLevelName == "Done_Scene3")
+            {
+                Application.LoadLevel("Done_Scene4");
+            }
+            else
+            {
+                Application.LoadLevel("Done_Main");
+            }
+        }
 	}
 	
 	void UpdateScore ()
