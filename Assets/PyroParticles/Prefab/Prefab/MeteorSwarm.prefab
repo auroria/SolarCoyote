@@ -102,7 +102,7 @@ MonoBehaviour:
   AudioSource: {fileID: 0}
   StartTime: 1
   StopTime: 3
-  Duration: 3
+  Duration: 10
   ForceAmount: 0
   ForceRadius: 0
   IsProjectile: 0
@@ -2233,7 +2233,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: Duration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 165786}
