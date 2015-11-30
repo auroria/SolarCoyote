@@ -44,15 +44,11 @@ public class Done_DestroyByContact : MonoBehaviour
 			hb = other.GetComponent<Done_HealthBar> ();
 			//if player collides with health pick up
 			if (this.tag == "Health Pick Up") {
-				hb.setPlayerHealth (hb.getPlayerHealth () + 10);
+				hb.setPlayerHealth (hb.getPlayerHealth () + 15);
 				hb.SetCurrentHealth (hb.getPlayerHealth ());
-			}
-			else if(this.tag == "Shoot Pick Up")
-			{
-				GameObject.FindGameObjectWithTag ("Player").GetComponent<Done_PlayerController>().fireRate -= .05f;
-			}
-			else
-			{ //player collides with hazard
+			} else if (this.tag == "Shoot Pick Up") {
+				GameObject.FindGameObjectWithTag ("Player").GetComponent<Done_PlayerController> ().fireRate -= .05f;
+			} else { //player collides with hazard
 				hb.setPlayerHealth (hb.getPlayerHealth () - 10);
 				hb.SetCurrentHealth (hb.getPlayerHealth ());
 			}
@@ -62,7 +58,13 @@ public class Done_DestroyByContact : MonoBehaviour
 				gameController.GameOver ();
 				Destroy (other.gameObject);
 			}
-		} else {
+		} else if (this.tag == "Player" && other.tag == "Meteor") 
+		{
+			hb.setPlayerHealth (hb.getPlayerHealth () - 5);
+			hb.SetCurrentHealth (hb.getPlayerHealth ());
+		}
+		else 
+		{
 			if(this.tag == "Health Pick Up" && (other.tag == "Bullet" || other.tag == "Laser"))
 			{
 				hb = GameObject.FindGameObjectWithTag ("Player").GetComponent<Done_HealthBar> ();

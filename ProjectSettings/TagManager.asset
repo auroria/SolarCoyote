@@ -11,6 +11,10 @@ TagManager:
   - Bullet
   - Particle
   - Bullet Pick Up
+  - Enemy
+  - Boundary
+  - Fire
+  - Meteor
   layers:
   - Default
   - TransparentFX
