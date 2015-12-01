@@ -1,18 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Done_WeaponController : MonoBehaviour
+public class Boss_WeaponController : MonoBehaviour
 {
 	public GameObject shot;
 	public Transform shotSpawn;
 	public float fireRate;
 	public float delay;
+	public Transform player;
+	public float projectileSpeed = 10.0f;
 
 	void Start ()
 	{
 		InvokeRepeating("Fire", delay, fireRate);
 	}
 
+	void Update()
+	{
+		transform.LookAt(player);
+//		InvokeRepeating("Fire", delay, fireRate);
+	}
 /*
 	void OnTriggerEnter (Collider col)
 	{
@@ -38,7 +45,8 @@ public class Done_WeaponController : MonoBehaviour
 
 	void Fire ()
 	{
-		Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+		GameObject shoot = Instantiate(shot, shotSpawn.position, shotSpawn.rotation) as GameObject;
+		shoot.GetComponent<Rigidbody>().velocity = (player.transform.position - transform.position).normalized * projectileSpeed;
 		GetComponent<AudioSource>().Play();
 	}
 }
