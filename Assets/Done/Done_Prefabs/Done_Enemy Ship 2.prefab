@@ -184,6 +184,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -264,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8846417901f4942d2a5fa9e32ce69d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 131164, guid: 3c5f4e32698bdb04eaed647f60310510, type: 2}
+  explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
   playerExplosion: {fileID: 100008, guid: 3455fe69f7ddc4604b95bf9b0a1e88d7, type: 2}
   scoreValue: 50
   speedToIncreaseLaserFrequency: .100000001
@@ -1400,7 +1401,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: explosion
       value: 
-      objectReference: {fileID: 131164, guid: 3c5f4e32698bdb04eaed647f60310510, type: 2}
+      objectReference: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
     - target: {fileID: 0}
       propertyPath: playerExplosion
       value: 

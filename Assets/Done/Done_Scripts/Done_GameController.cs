@@ -17,15 +17,16 @@ public class Done_GameController : MonoBehaviour
 	
 	private bool gameOver;
 	private bool restart;
-	private int score;
+	private static int score = 0;
+	int beginningScore;
 	
 	void Start ()
 	{
+		beginningScore = score;
 		gameOver = false;
 		restart = false;
 		restartText.text = "";
 		gameOverText.text = "";
-		score = 0;
 		UpdateScore ();
 		StartCoroutine (SpawnWaves ());
 	}
@@ -69,8 +70,7 @@ public class Done_GameController : MonoBehaviour
 	{
 		score += newScoreValue;
 		UpdateScore ();
-
-		if (score >= changeLevelAtScore) 
+		if (score-beginningScore >= changeLevelAtScore) 
 		{
 			//yield return new WaitForSeconds(5);
 			if(Application.loadedLevelName=="Done_Main")

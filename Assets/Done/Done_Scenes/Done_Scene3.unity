@@ -2348,13 +2348,12 @@ MonoBehaviour:
   - {fileID: 100002, guid: afc18fc39ade3744397c0c993b57be53, type: 2}
   - {fileID: 177144, guid: d7e42cc657d21cd40b0f53ec79356fda, type: 2}
   - {fileID: 177144, guid: d7e42cc657d21cd40b0f53ec79356fda, type: 2}
-  - {fileID: 177144, guid: d7e42cc657d21cd40b0f53ec79356fda, type: 2}
   spawnValues: {x: 6, y: 5, z: 16}
   hazardCount: 10
   spawnWait: .75
   startWait: 5
   waveWait: .5
-  changeLevelAtScore: 100
+  changeLevelAtScore: 400
   scoreText: {fileID: 1171993750}
   restartText: {fileID: 1363831536}
   gameOverText: {fileID: 2126980976}

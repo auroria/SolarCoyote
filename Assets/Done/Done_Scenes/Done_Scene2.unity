@@ -2259,7 +2259,7 @@ MonoBehaviour:
   spawnWait: .75
   startWait: 5
   waveWait: 4
-  changeLevelAtScore: 100
+  changeLevelAtScore: 300
   scoreText: {fileID: 1171993750}
   restartText: {fileID: 1363831536}
   gameOverText: {fileID: 2126980976}

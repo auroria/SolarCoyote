@@ -551,11 +551,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 370770085}
   m_LocalRotation: {x: -7.10650161e-09, y: .999048233, z: -.0436193943, w: -1.62765616e-07}
-  m_LocalPosition: {x: -5, y: -1, z: 10}
+  m_LocalPosition: {x: -5.8499999, y: -1, z: 12.4399996}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 2139772162}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &370770087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,10 +569,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shot: {fileID: 100000, guid: 11e27c26ac87b40f0a62ec40d7261989, type: 2}
   shotSpawn: {fileID: 370770086}
-  fireRate: .25
+  fireRate: 1
   delay: 1
   player: {fileID: 1755769571}
-  projectileSpeed: 10
+  projectileSpeed: 20
 --- !u!1001 &385380834
 Prefab:
   m_ObjectHideFlags: 0
@@ -785,11 +785,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 901871049}
   m_LocalRotation: {x: -7.10650161e-09, y: .999048233, z: -.0436193943, w: -1.62765616e-07}
-  m_LocalPosition: {x: 5, y: -1, z: 10}
+  m_LocalPosition: {x: 5.8499999, y: -1, z: 12.4399996}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 2139772162}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!114 &901871051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -803,10 +803,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shot: {fileID: 100000, guid: 11e27c26ac87b40f0a62ec40d7261989, type: 2}
   shotSpawn: {fileID: 901871050}
-  fireRate: .25
+  fireRate: 1
   delay: 1
   player: {fileID: 1755769571}
-  projectileSpeed: 10
+  projectileSpeed: 20
 --- !u!1 &911769992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1957,46 +1957,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0, y: 9.62317799e-08, z: 200}
   m_Center: {x: -.465906143, y: .271778584, z: .516789377}
---- !u!1 &1584033994
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 134698, guid: 64ca04a4203ef3c42b4057ff86b4ef1d, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1584033995}
-  - 114: {fileID: 1584033996}
-  m_Layer: 0
-  m_Name: Health Bar Position
-  m_TagString: Health Bar
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1584033995
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 474752, guid: 64ca04a4203ef3c42b4057ff86b4ef1d, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1584033994}
-  m_LocalRotation: {x: -7.10650161e-09, y: .999048233, z: -.0436193943, w: -1.62765616e-07}
-  m_LocalPosition: {x: 5.96559668, y: .339427352, z: 17.2629433}
-  m_LocalScale: {x: 4, y: 4, z: 4}
-  m_Children: []
-  m_Father: {fileID: 2139772162}
-  m_RootOrder: 2
---- !u!114 &1584033996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11478200, guid: 64ca04a4203ef3c42b4057ff86b4ef1d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1584033994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1614494195
 GameObject:
   m_ObjectHideFlags: 0
@@ -2477,20 +2437,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hazards:
-  - {fileID: 100000, guid: 7d5f7699d6d1d48e485ac71126e12061, type: 2}
-  - {fileID: 100002, guid: 9143e2b62ad50488482f9b73672fc331, type: 2}
-  - {fileID: 100002, guid: 834bfaee90a9d4e04b1e8c1ca22cc88e, type: 2}
   - {fileID: 100002, guid: afc18fc39ade3744397c0c993b57be53, type: 2}
   - {fileID: 100002, guid: afc18fc39ade3744397c0c993b57be53, type: 2}
   - {fileID: 100002, guid: afc18fc39ade3744397c0c993b57be53, type: 2}
   - {fileID: 100002, guid: afc18fc39ade3744397c0c993b57be53, type: 2}
   - {fileID: 177144, guid: d7e42cc657d21cd40b0f53ec79356fda, type: 2}
   spawnValues: {x: 6, y: 5, z: 16}
-  hazardCount: 0
+  hazardCount: 2
   spawnWait: .75
   startWait: 5
-  waveWait: 4
-  changeLevelAtScore: 100
+  waveWait: 7
+  changeLevelAtScore: 500
   scoreText: {fileID: 1171993750}
   restartText: {fileID: 1363831536}
   gameOverText: {fileID: 2126980976}
@@ -2867,6 +2824,7 @@ GameObject:
   - 114: {fileID: 2139772164}
   - 65: {fileID: 2139772171}
   - 114: {fileID: 2139772168}
+  - 114: {fileID: 2139772169}
   m_Layer: 0
   m_Name: Boss_Enemy
   m_TagString: Enemy
@@ -2881,12 +2839,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2139772161}
   m_LocalRotation: {x: -7.10644565e-09, y: -.999048233, z: -.0436190516, w: 1.62765616e-07}
-  m_LocalPosition: {x: 0, y: 0, z: 71.1699982}
+  m_LocalPosition: {x: 0, y: 0, z: 67.8099976}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 70046787}
   - {fileID: 1614494196}
-  - {fileID: 1584033995}
   - {fileID: 370770086}
   - {fileID: 901871050}
   m_Father: {fileID: 0}
@@ -2907,8 +2864,8 @@ MonoBehaviour:
     xMax: 10
     yMin: -10
     yMax: 10
-  tilt: 2
-  dodge: 4
+  tilt: 5
+  dodge: 10
   smoothing: 4
   rotationX: 0
   rotationY: 0
@@ -2926,6 +2883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c814b232eed6f2a4a8ca13b450d915e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingHealth: 600
   isDead: 0
 --- !u!114 &2139772165
 MonoBehaviour:
@@ -2950,7 +2908,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2139772161}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1be4472894949437694aead55c6da60f, type: 3}
@@ -3047,6 +3005,23 @@ MonoBehaviour:
   delay: 0
   player: {fileID: 1755769571}
   projectileSpeed: 10
+--- !u!114 &2139772169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2139772161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf6f1d88b285654281af7229b024bcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shot: {fileID: 144842, guid: 8f18e1d8c46c51f429429815455062fc, type: 2}
+  shotSpawn: {fileID: 70046787}
+  fireRate: .25
+  delay: 0
+  player: {fileID: 1755769571}
+  projectileSpeed: 100
 --- !u!65 &2139772171
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -32,13 +32,15 @@ public class Done_DestroyByContact : MonoBehaviour
 			return;
 		}
 		
+	
 		if (explosion != null)
 		{
+			Destroy (gameObject);
 			Instantiate(explosion, transform.position, transform.rotation);
 			//Destroy (other.gameObject);
-			Destroy (gameObject);
+			
 		}
-
+	
 		
 		if (other.tag == "Player") {
 			hb = other.GetComponent<Done_HealthBar> ();

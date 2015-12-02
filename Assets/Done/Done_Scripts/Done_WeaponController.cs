@@ -12,30 +12,7 @@ public class Done_WeaponController : MonoBehaviour
 	{
 		InvokeRepeating("Fire", delay, fireRate);
 	}
-
-/*
-	void OnTriggerEnter (Collider col)
-	{
-		if (col.gameObject.tag == "Player")
-		{
-			//store Player position
-			player = col.gameObject;
-			InvokeRepeating("Fire", delay, fireRate);
-		}
-	}
-
-	void OnTriggerExit(Collider col)
-	{
-		if (col.gameObject.tag == "Player")
-		{
-			//remove player loc
-			player = null;
-			CancelInvoke("Shoot");
-		}
-	}
-*/
-
-
+	
 	void Fire ()
 	{
 		Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
