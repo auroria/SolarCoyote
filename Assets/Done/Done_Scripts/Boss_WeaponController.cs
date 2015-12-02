@@ -47,6 +47,6 @@ public class Boss_WeaponController : MonoBehaviour
 	{
 		GameObject shoot = Instantiate(shot, shotSpawn.position, shotSpawn.rotation) as GameObject;
 		shoot.GetComponent<Rigidbody>().velocity = (player.transform.position - transform.position).normalized * projectileSpeed;
-		GetComponent<AudioSource>().Play();
+		//GetComponent<AudioSource>().Play();
 	}
 }

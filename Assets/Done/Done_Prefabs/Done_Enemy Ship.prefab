@@ -32,6 +32,7 @@ GameObject:
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400008}
   - 82: {fileID: 8200000}
+  - 114: {fileID: 11486546}
   m_Layer: 0
   m_Name: Done_Enemy Ship
   m_TagString: Enemy
@@ -184,7 +185,6 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shot: {fileID: 100000, guid: 11e27c26ac87b40f0a62ec40d7261989, type: 2}
   shotSpawn: {fileID: 400006}
-  fireRate: 1.5
+  fireRate: 1
   delay: .5
 --- !u!114 &11400004
 MonoBehaviour:
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8846417901f4942d2a5fa9e32ce69d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 100008, guid: 875c9bcb71a8d7f46a64a8a7df5987e0, type: 2}
+  explosion: {fileID: 100000, guid: 67e5b9f09995840449c988b145cc1d7b, type: 2}
   playerExplosion: {fileID: 100008, guid: 3455fe69f7ddc4604b95bf9b0a1e88d7, type: 2}
   scoreValue: 20
   speedToIncreaseLaserFrequency: .100000001
@@ -308,6 +308,18 @@ MonoBehaviour:
   startWait: {x: .5, y: 1}
   maneuverTime: {x: 1, y: 2}
   maneuverWait: {x: 1, y: 2}
+--- !u!114 &11486546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a02a475f8019be4d97eeed6110b715a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 6
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -1420,7 +1432,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: fireRate
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed
@@ -1429,7 +1441,19 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: explosion
       value: 
-      objectReference: {fileID: 100008, guid: 875c9bcb71a8d7f46a64a8a7df5987e0, type: 2}
+      objectReference: {fileID: 100000, guid: 15ca5b8fa431dc04291a79cadcd19874, type: 2}
+    - target: {fileID: 0}
+      propertyPath: shot
+      value: 
+      objectReference: {fileID: 141530, guid: 369eee557c4d41c479225bf744fa6a5f, type: 2}
+    - target: {fileID: 0}
+      propertyPath: lifetime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: scoreValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100002}
